@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <h2>Введите два числа</h2>
+    <div class="calculator">
+      <div class="calculator__input">
+        <input class="calculator__input-first" id="input1" />
+        <input class="calculator__input-second" id="input2" />
+      </div>
+      <div class="calculator__buttons">
+        <button class="calculator__button" onclick="addition()">+</button>
+        <button class="calculator__button" onclick="extraction()">-</button>
+        <button class="calculator__button" onclick="division()">/</button>
+        <button class="calculator__button" onclick="multiplication()">*</button>
+      </div>
+      <div
+        class="calculator__result"
+        id="result"
+        onclick="changeColor(this)"
+      ></div>
+    </div>
+    <script src="./3.js"></script>
+  </body>
+</html>

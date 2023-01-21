@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Опросник для обладетей кошечек</h1>
+    <form onsubmit="return false">
+      <div>
+        <fieldset>
+          <legend>
+            <h2>Основные данные</h2>
+          </legend>
+          <div>
+            <label for="name"> Кличка питомца </label>
+            <input type="text" id="name" required />
+          </div>
+          <div>
+            <label for="owner"> Имя владельца </label>
+            <input
+              type="text"
+              id="owner"
+              placeholder="Напиши свое имя"
+              required
+            />
+          </div>
+          <div>
+            <label for="tel"> Контакты владельца </label>
+            <input type="tel" id="tel" minlength="10" maxlength="20" />
+          </div>
+        </fieldset>
+      </div>
+      <div>
+        Порода питомца
+        <select id="selectCat">
+          <option value="Метис">Метис</option>
+          <option value="Мекун">Мей кун</option>
+          <option value="Шотландец">Шотландец</option>
+        </select>
+      </div>
+      <div>
+        Чем питается?
+        <div id="food">
+          <input type="checkbox" value="Сухой корм" name="" id="" /> Сухой корм
+          <input type="checkbox" value="Влажный корм" />Влажный корм
+          <input type="checkbox" value="Натуральный корм" name="" id="" />
+          Натуральный корм
+        </div>
+      </div>
+      <div id="sex">
+        Пол питомца
+        <input type="radio" name="sex" id="girl" value="Самка" />Самка
+        <input type="radio" name="sex" id="boy" value="Самец" />Самец
+      </div>
+      <div>
+        <label for="comment"> Комментарий </label
+        ><textarea rows="10" cols="35" id="comment"></textarea>
+      </div>
+      <div>
+        <label for="photo">Можете добавить фотографию питомца</label>
+        <input type="file" id="photo" />
+      </div>
+      <div>
+        <input type="submit" value="Сохранить" onclick="submitForm()" />
+      </div>
+    </form>
+    <script src="./2.js"></script>
+  </body>
+</html>
