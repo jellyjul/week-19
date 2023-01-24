@@ -91,3 +91,33 @@ console.log(ValidatorStatic.isEmail('alisa@mail.ru'));
 console.log(ValidatorStatic.isDomain('itgirlschool.ru'));
 console.log(ValidatorStatic.isDate('12.05.2021'));
 console.log(ValidatorStatic.isPhone('+7(910)123-45-67')); 
+
+
+
+const person = {
+    name:'valera',
+    age:23
+}
+
+let city = person.city
+city = "amsterdam"
+console.log(person.city)
+
+let user = {
+    name: "John",
+    surname: "Smith",
+  
+    get fullName() {
+      return `${this.name} ${this.surname}`;
+    },
+  
+    set  fullName(value) {
+      [this.name, this.surname] = value.split(" ");
+    }
+  };
+  
+  // set fullName запустится с данным значением
+  user.fullName = "Alice Cooper";
+  
+  alert(user.name); // Alice
+  alert(user.surname); // Cooper

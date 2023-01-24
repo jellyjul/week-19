@@ -3,7 +3,6 @@
 // и по нажатию на кнопку "Ок" создайте экземпляр этого класса, заполнив его свойства ответами из опросника.
 //  В этом классе будут только свойства и конструктор, без методов. 
 //  Выведите результат (заполненный объект класса Cat) в консоль при помощи console.log.
-function  submitForm() {
 const nickName = document.getElementById('name')
 const owner = document.getElementById('owner')
 const tel = document.getElementById('tel')
@@ -23,17 +22,27 @@ class Cat {
         this.comment = comment
     }
 }
-
-
+function  submitForm() {
 //некорректно работает для чекбоксов (можно заменить на радио кнопки, но хочется разобраться с чекбоксами)
-let typeOfFood
-let typeOfFoodArr = []
-typeOfFoodArr = food.children
-Array.from(typeOfFoodArr).forEach((element) => {
-    if (element.checked) {
-        typeOfFood = element.value
-    }
-})
+// let typeOfFood
+// let typeOfFoodArr = []
+// typeOfFoodArr = food.children
+// Array.from(typeOfFoodArr).forEach((element) => {
+//     if (element.checked) {
+//         typeOfFood = element.value
+//     }
+// })
+
+
+let typeOfFood = [];
+    let typeOfFoodArr = []
+    typeOfFoodArr = food.children
+    Array.from(typeOfFoodArr).forEach((element) => {
+        console.log(element.checked);
+        if (element.checked) {
+            typeOfFood.push(element.value)
+        }
+    })
 
 
 let typeOfSex
